@@ -38,27 +38,27 @@ const handleCategory = async () =>{
         
          <div class="card card-compact  bg-gray-300 shadow-xl">
           <figure>
-            <img class="w-96 md:w-96 md:h-48 lg:w-80 lg:h-52 relative" src="${video.thumbnail}" alt="thumbnail" />
+            <img class="w-96 h-52 md:w-96 md:h-48 lg:w-80 lg:h-52 relative" src="${video.thumbnail}" alt="thumbnail" />
             ${video.others.posted_date && `<h1 class="bg-black p-2 text-white absolute mt-36 ml-40"> ${convertTime(video.others.posted_date)}</h1>`}
             
           </figure>
 
        <div class="card-body">
-          <div class="flex gap-5" >
+          <div class="flex gap-5 justify-center lg:justify-start" >
                <div class="author">
-                  <div>
+                 
                      <img class="w-10 h-10  rounded-full" src=${video.authors[0].profile_picture} />
-                  </div>
+                  
                </div>
                <h2 class="card-title"> ${video.title}</h2>
           </div>
-          <div class=" flex">
+          <div class=" flex justify-center lg:justify-start">
             <h6>${video.authors[0].profile_name}</h6>
             <small>
                ${video.authors[0].verified? video.authors[0].verified && '<img src="Asset/fi_10629607.png" alt="">' : ''} 
               </small>
             </div>
-            <small>${video.others.views} views</small>
+            <small class="text-center lg:text-left">${video.others.views} views</small>
 
         </div>
               
